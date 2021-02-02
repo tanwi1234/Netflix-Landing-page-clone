@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>netflix</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="detailspage.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type= "text/javascript">
+		$(document).ready(function(){
+			$("#emailcheck").hide();
+			var email_err=true;
+			var pass_err =true;
+			$("#ename").keyup(function()
+			{
+				email_check();
+			});
+            
+
+			function email_check()
+			{
+				var email_add=$("#ename").val();
+				if(email_add.length == "")
+				{
+					$("#emailcheck").show();
+					$("#emailcheck").html("Please enter a valid email address or phone number.");
+					document.getElementById("ename").style.borderBottom=" solid orange 2px";
+					
+					
+					$("#emailcheck").focus();
+					email_err=false;
+					return false;
+
+				}
+				else
+				{
+					$("#emailcheck").hide();
+				}
+
+			}
+			$("#pname").keyup(function()
+			{
+				password_check();
+			});
+             
+			function password_check()
+			{
+				var pass_add=$("#pname").val();
+				if(pass_add.length == "")
+				{
+					$("#passcheck").show();
+					$("#passcheck").html("Your password must conatin between 4 and 60 characters");
+					document.getElementById("pname").style.borderBottom="solid orange 2px";
+					
+					
+					$("#passcheck").focus();
+					pass_err=false;
+					return false;
+
+				}
+				else
+				{
+					$("#passcheck").hide();
+				}
+			}
+		});
+		function learn()
+		{
+			var para=document.getElementById("info");
+			var paras=document.getElementById("learn");
+			
+			
+				para.style.display="block";
+				paras.style.display="none";
+				
+				
+
+		}
+		var para=document.getElementById("info");
+		var error=document.getElementById("emailcheck").value();
+				var errors=document.getElementById("passcheck").value();
+				if(para.style.display="block"&& error.length>0 && errors.length>0 )
+				{
+					document.getElementById("formi").style.height="700px";
+				}
+				
+				function subm()
+				{
+					var pass_add=$("#pname").val();
+					var email_add=$("#ename").val();
+					if(pass_add.length == "")
+					{
+						$("#passcheck").show();
+						$("#passcheck").html("Your password must conatin between 4 and 60 characters");
+						document.getElementById("pname").style.borderBottom="solid orange 2px";
+					
+					
+					$("#passcheck").focus();
+					pass_err=false;
+					return false;
+
+					}
+					if(email_add.length == "")
+					{
+						$("#emailcheck").show();
+
+					$("#emailcheck").html("Please enter a valid email address or phone number.");
+					document.getElementById("ename").style.borderBottom=" solid orange 2px";
+					
+					
+					$("#emailcheck").focus();
+					email_err=false;
+					return false;
+				}
+				if(pass_add.length == ""&&email_add.length == "")
+				{
+					$("#passcheck").html("Your password must conatin between 4 and 60 characters");
+					$("#emailcheck").html("Please enter a valid email address or phone number.");
+
+				}
+				}	
+
+	</script>
+
+
+</head>
+<body>
+
+	<div class="complete">
+		<header>
+		<img src="logo.png" width="215px" class="logo" alt="logo">
+	</header>
+	<div id="main">
+<form id="formi">
+	<h1> Sign in</h1>
+	<input type="email"name="ename" placeholder="Email or phone number" id="ename"><br><h3 id="emailcheck"></h3><br>
+	<input type="password" name="pname" placeholder="Password" id="pname"><br><h3 id="passcheck"></h3><br>
+	<button type="submit" id="btns" onclick="subm()">Sign in</button>
+	<div class="spans">
+	<span id="first"><i class="fa fa-check-square" aria-hidden="true"></i> Remember me </span>
+	<span id="sec"> <a href="needhelp.html" id="need">Need help?</a></span>
+</div>
+	<div class="log">
+	<i class="fab fa-facebook-f" id="fb"></i>Login with facebook
+	</div>
+	<div class="third">
+		<span>Now to Netflix?</span><span id="span2"><a href="index.html" id="sign" >Sign up now</a></span>
+</div>
+<div class="four">
+	<span>
+	This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#" id="learn"onclick="learn()">Learn more </a><div id="info">The information collected by Google reCAPTCHA is subject to the Google <a href="#">Privacy Policy</a> and<a href="#"> Terms of Service</a>, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).</div></span>
+</div>
+
+	</form>
+</div>
+	<div  class="container-fluid">
+		<div id="contacts" class="container">
+		<p>Questions? Call 000-800-040-1843</p>
+	</div>
+	<div class="container" id="alldetails">
+		
+	<span id="para1">
+		 Gift Card Terms
+	</span>
+	<span id="para2">
+		 Terms of Use 
+	</span>
+	<span id="para3">
+		Privacy Statement
+	</span>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
