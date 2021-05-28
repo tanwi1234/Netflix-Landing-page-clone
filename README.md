@@ -7,6 +7,15 @@ Here is video and picture of my project:
 https://user-images.githubusercontent.com/65597267/103630293-75b5b300-4f67-11eb-939c-1e82eb7fafbf.mp4
 
 
+
+
+
+
+
+
+
+
+
 ![Screenshot (1001)](https://user-images.githubusercontent.com/65597267/106600096-f922ee00-657f-11eb-8c68-286915ee00a8.png)
 ![Screenshot (1002)](https://user-images.githubusercontent.com/65597267/106600165-0b049100-6580-11eb-99a3-39bda7f04705.png)
 ![Screenshot (1003)](https://user-images.githubusercontent.com/65597267/106600194-13f56280-6580-11eb-8481-7155653929ec.png)
